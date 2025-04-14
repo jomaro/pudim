@@ -1,9 +1,9 @@
-FROM python:3-alpine
+FROM ferronserver/ferron:1.0.0
 
-COPY app/* /app/
+COPY app/* /var/www/ferron/
 
-WORKDIR /app
+WORKDIR /var/www/ferron/
 
-EXPOSE 8000
+EXPOSE 80
 
-ENTRYPOINT [ "python", "-m", "http.server" ]
+# ENTRYPOINT [ "python", "-m", "http.server" ]
